@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${titles}"></title>
+</head>
+<body>
+<h1 th:text="${titles}"></h1>
+
+<span th:if="${users.isEmpty()}" th:text="'配列がありません'"></span>
+<table th:if="${not users.isEmpty()}">
+    <thead>
+    <tr>
+        <th>名前</th>
+        <th>名字</th>
+        <th>メール</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="user,iter:${users}">
+        <td th:text="${users_name[iter.index]}"></td>
+        <td th:text="${users_lastname[iter.index]}"></td>
+        <td th:text="${users_email[iter.index]}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

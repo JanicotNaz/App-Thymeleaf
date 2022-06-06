@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/調子.css}"></link>
+</head>
+<body>
+<ul>
+    <li>
+        <a th:href="@{/api/v1/variable/string/'Hola janicot'}">/api/v1/variable/string/Hola janicot</a>
+    </li>
+    <li>
+        <a th:href="@{/api/v1/variable/string/'Hola janicot'/'5'}">/api/v1/variable/string/Hola janicot/5</a>
+    </li>
+    <h1 class="color-red">prueba</h1>
+</ul>
+<img th:src="@{/image/kronii.jpg}"/>
+</body>
+</html>
